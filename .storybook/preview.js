@@ -1,3 +1,6 @@
+import '../src/ui/styles/globals.css';
+import StoryThemeProvider from '../src/ui/themes/StoryThemeProvider';
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -7,3 +10,5 @@ export const parameters = {
     },
   },
 }
+
+export const decorators = [StoryThemeProvider];
