@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BottomButton, ContainerStyled, SectionButtom, SectionContainer, SectionDescription, SectionPictureContainer, SectionTitle } from "./_Presentation.styled"
+import { BottomButton, ContainerStyled, SectionButton, SectionContainer, SectionDescription, SectionPictureContainer, SectionTitle } from "./_Presentation.styled"
 
 const Presentation = () => {
     const [cleanerPicture, setCleanerPicture] = useState('');
@@ -19,9 +19,9 @@ const Presentation = () => {
                 <SectionDescription>
                     São mais de 5.000 profissionais esperando por você
                 </SectionDescription>
-                <SectionButtom mui={{variant: 'contained'}} href={'/encontrar-diarista'}>
-                    Encontrar um(a) diarista
-                </SectionButtom>
+                <SectionButton mui={{variant: 'contained'}} href={'/encontrar-diarista'}>
+                    Encntrar um(a) diarista
+                </SectionButton>
                 <SectionPictureContainer>
                     <img src={cleanerPicture} alt={'Diarista'} />
                 </SectionPictureContainer>

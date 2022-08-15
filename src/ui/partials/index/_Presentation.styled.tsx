@@ -4,12 +4,13 @@ import RoundedButton from "ui/components/Inputs/RoundedButton/RoundedButton";
 import Link, { LinkProps } from "ui/components/navigation/Link/Link";
 
 export const SectionContainer = styled('section')`
+    position: relative;
     min-height: 250px;
     background-image: url('/img/home/living-room.svg');
     background-repeat: no-repeat;
     background-position: right center;
     background-size: cover;
-    position: relative;
+    
 
     ${({theme}) => theme.breakpoints.up('md')}{
         background-position: center;
@@ -95,7 +96,7 @@ export const SectionDescription = styled('p')`
     };
 `;
 
-export const SectionButtom = styled((props: LinkProps) => <Link {...props} Component={RoundedButton}/> )`
+export const SectionButton = styled((props: LinkProps) => <Link {...props} Component={RoundedButton}/> )`
     grid-area: button;
     ${({theme}) => theme.breakpoints.up('md')}{
         width: 405px;
@@ -116,8 +117,7 @@ export const SectionPictureContainer = styled('div')`
     &::before, &::after{
         content: ' ';
         position:absolute;
-        border-radius: 100%;        
-        z-index: 2;
+        border-radius: 100%;    
     };
 
     &::before{        
@@ -126,7 +126,7 @@ export const SectionPictureContainer = styled('div')`
         right: -5px;
         width: 130px;
         height: 130px;        
-        
+        z-index:2;
     };
 
     &::after{        
@@ -145,7 +145,7 @@ export const SectionPictureContainer = styled('div')`
 
 export const BottomButton = styled('span')`
     position: absolute;
-    bottom: 0;
+    //bottom: 0;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: ${({theme}) => theme.palette.secondary.main};
@@ -153,7 +153,6 @@ export const BottomButton = styled('span')`
     border-radius: 50px;
     color: ${({theme}) => theme.palette.common.white};
     border: 5px solid currentColor;
-
     i{
         position: relative;
         left: -2px;
