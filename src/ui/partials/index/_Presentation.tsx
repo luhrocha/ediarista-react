@@ -20,7 +20,7 @@ const Presentation = () => {
                     São mais de 5.000 profissionais esperando por você
                 </SectionDescription>
                 <SectionButton mui={{variant: 'contained'}} href={'/encontrar-diarista'}>
-                    Encntrar um(a) diarista
+                    Encontrar um(a) diarista
                 </SectionButton>
                 <SectionPictureContainer>
                     <img src={cleanerPicture} alt={'Diarista'} />
